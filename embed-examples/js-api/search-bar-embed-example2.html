@@ -1,0 +1,37 @@
+<head>
+    <style>
+        #knowi-div {
+            /* Add any style customizations here */
+        }
+    </style>
+
+    /* Either use the following block or copy and paste the minified code in */
+    <script src="https://www.knowi.com/minify/knowi-api.min.js"/>
+
+    <script>
+        function loadSearchAnalytics() {
+            Knowi.render('#knowi-div', {
+                type: 'nlp',
+                token: "<Your Session Token>",
+                url: '<Your Knowi URL>',
+                view: {
+                    nlpOptions: {
+                        icon: "off",
+                        css: {
+                            background: 'transparent'
+                        },
+                        placeholder: "Try: Sent by customer",
+                    }
+                }
+            }, function () {
+            });
+        }
+    </script>
+</head>
+<BODY onload="loadSearchAnalytics()">
+
+<h2>Demo Knowi API</h2>
+
+<div id="knowi-div"></div>
+
+</body>
